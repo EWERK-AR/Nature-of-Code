@@ -1,7 +1,7 @@
 Created GitHub Repo for Nature of Code with README.md
 Cloned Repo to local machine
 Created Chapter 0 and 1 folder with index.html and sketch.js files in each
-Changes staged using git add., commited using git commit -m "Describing changes" and lastly pushed to GitHub using git push
+Changes staged using git add., commited using git commit -m "Describing changes" and pushed to GitHub using git push
 This process will be shortened in the future documentation as: Pushed changes to GitHub
 Installed "Live Server" for VS Code
 Created Documentation.txt to keep a clear record of my workflow and pushed it to GitHub
