@@ -7,3 +7,6 @@ Installed "Live Server" for VS Code
 Created Documentation.txt to keep a clear record of my workflow and pushed it to GitHub
 Configured both index.html files to run JS sketches via Content Delivery Network (CDN) on Live Server for live preview and editing
 Organized project with main dashboard, chapter dashboards, and individual HTML files for each JS sketch with CDN, enabling structured navigation and live preview
+Removed .DS_Store from repository (accidentally pushed it to GitHub from local machine)
+On GitHub created .gitignore and added .DS_Store to prevent future accidental pushes
+Pulled the changes from GitHub to local machine
