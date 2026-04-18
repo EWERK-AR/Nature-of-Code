@@ -5,3 +5,4 @@ Changes staged using git add., commited using git commit -m "Describing changes"
 This process will be shortened in the future documentation as: Pushed changes to GitHub
 Installed "Live Server" for VS Code
 Created Documentation.txt to keep a clear record of my workflow and pushed it to GitHub
+Configured both index.html files to run JS sketches via Content Delivery Network (CDN) on Live Server for live preview and editing
