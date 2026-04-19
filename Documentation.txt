@@ -11,4 +11,4 @@ Removed .DS_Store from repository (accidentally pushed it to GitHub from local m
 On GitHub created .gitignore and added .DS_Store to prevent future accidental pushes
 Pulled the changes from GitHub to local machine
 Started working on sketch1 according to the first example in the book "Nature of Code". Tested results via live server and pushed to GitHub.
-Added comments to the index1.html files for easier understanding.
+Added comments to the index.html files for easier understanding.
