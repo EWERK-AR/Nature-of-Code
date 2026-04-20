@@ -18,27 +18,15 @@ class Walker {
         // Draw a point at the Walker´s position
         point(this.x, this.y);
     }
-    // The step method makes the Walker take a step in a random direction
+    // The step method makes the Walker take a step in a random direction (including diagonals)
     step() {
-        // Generate random number between 0 and 3 (changing variable, not const), round it down to the nearest whole number
-        let choice = floor(random(4));
-        // Based on the random number, decide the direction to move. Boolean operator tests both value and type equality
-        // Move right
-        if (choice === 0) {
-            this.x++;
-        }
-        // Move left
-        else if (choice === 1) {
-            this.x--;
-        }
-        // Move up
-        else if (choice === 2) {
-            this.y++;
-        }
-        //Move down
-        else if (choice === 3) {
-            this.y--;
-        }
+        // Generate a random number: 0, 1, or 2 → then shift it to -1, 0, or 1; round it down to the nearest whole number
+        // This determines how much to move along the x and y-axis (left, none or right)
+        let xstep = floor(random(3)) - 1;
+        let ystep = floor(random(3)) - 1;
+        // Based on the random number, decide the direction to move (9 possibilieties)
+        this.x += xstep; //+= Take the current value of this.x and add xstep to it: this.x = this.x + xstep (longer version)
+        this.y += ystep;
     }
 }
 
