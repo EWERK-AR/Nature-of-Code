@@ -1,4 +1,4 @@
-// In this sketch the walker can only step in 4 directions
+// In this sketch the walker can step in 9 directions
 
 // The "Walker" class defines a moving point on the canvas
 // It has properties (position) and behaviors (displaying itself)
