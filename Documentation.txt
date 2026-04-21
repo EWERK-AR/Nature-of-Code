@@ -12,3 +12,5 @@ On GitHub created .gitignore and added .DS_Store to prevent future accidental pu
 Pulled the changes from GitHub to local machine
 Started working on sketch1 according to the first example in the book "Nature of Code". Tested results via live server and pushed to GitHub.
 Added comments to the index.html files for easier understanding.
+Restructured the repo and indexing, added "Walker", "Random Number Distribution" and "Excercise" folder. Finished all walker.js files (4 directions, 9 directions integers, 9 directions floating).
+Finished Random Number Distribution.js task.
