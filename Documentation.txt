@@ -18,4 +18,4 @@ Created folder, .txt and index.html file for the solution of the Drawing Aces ex
 Solved the excercise. Tried to open it via Live Server, didn´t work. Realised .txt cannot be displayed that way. Converted .txt into .js file. Nothing showed. Spent hours trying different solutions.
 Questioned my life and took a break.
 Found a solution for the Aces.js file issue, tested via Live Server, everything worked. Happy life!
-
+Completed Biased Walker Mouse Position excercise, created corresponding files.

@@ -18,21 +18,36 @@ class Walker {
         // Draw a point at the Walker´s position
         point(this.x, this.y);
     }
-    // This step method makes the Walker take a step in a biased direction while keeping the 9 possible outcomes (including diagonals)
+    // The step method makes the Walker take a step in a random direction (including diagonals)
     step() {
-        
-        // The random function generates values between -1 and 1, allowing for movement in all 9 directions
-        // -1 (left), 0 (no horizontal movement), or 1 (right)
+        // Generate a random floating-point step between -1 and 1 for smooth, continuous movement
         let xstep = random(-1, 1);
-        // -1 (up), 0 (no vertical movement), or 1 (down)
         let ystep = random(-1, 1);
-        // Bias the movement towards right and down with a 30% chance of restriction of moving left or up
-        // If the random value is greater than 0.7, the walker will not move left or up
-        if (random(0, 1) > 0.7) {
-            // No left movement
-            if (xstep < 0) xstep = 0;
-            // No up movement
-            if (ystep < 0) ystep = 0;
+        
+        // random(1) = picks a number between 0 and 1, this "if" statement is just for the probability (like flipping a coin)
+        // > 0.5 is true about 50% of the time
+        if (random(0, 1) > 0.5) {
+            // Biased x movement towards the mouse, if the mouse is to the right and the walker is moving left → reduced step
+            // && = "and" → both conditions must be true
+            if (mouseX > this.x && xstep < 0) {
+                xstep *= 0.2;
+            }
+            // If the mouse is to the left (mouseX < this.x) and the walker is moving right (xstep > 0) → reduced step
+            if (mouseX < this.x && xstep > 0) {
+                // → reduced step = multiply the current value by 0.2, this makes the movement much smaller
+                xstep *= 0.2;
+            }
+            
+            // Biased y movement towards the mouse
+            // If the mouse is below (mouseY > this.y) and the walker is moving up (ystep < 0)
+            if (mouseY > this.y && ystep < 0) {
+                // → reduced step = multiply the current value by 0.2, this makes the movement much smaller
+                ystep *= 0.2;
+            }
+            // If the mouse is above and the walker is moving down → reduced step
+            if (mouseY < this.y && ystep > 0) {
+                ystep *= 0.2;
+            }
         }
         // Based on the random number, decide the direction to move (9 possibilities)
         this.x += xstep; //+= Take the current value of this.x and add xstep to it: this.x = this.x + xstep (longer version)

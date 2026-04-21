@@ -24,7 +24,7 @@ class Walker {
         // This determines how much to move along the x and y-axis (left, none or right)
         let xstep = floor(random(3)) - 1;
         let ystep = floor(random(3)) - 1;
-        // Based on the random number, decide the direction to move (9 possibilieties)
+        // Based on the random number, decide the direction to move (9 possibilities)
         this.x += xstep; //+= Take the current value of this.x and add xstep to it: this.x = this.x + xstep (longer version)
         this.y += ystep;
     }

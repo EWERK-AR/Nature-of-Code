@@ -23,7 +23,7 @@ class Walker {
         // Generate a random floating-point step between -1 and 1 for smooth, continuous movement
         let xstep = random(-1, 1);
         let ystep = random(-1, 1);
-        // Based on the random number, decide the direction to move (9 possibilieties)
+        // Based on the random number, decide the direction to move (9 possibilities)
         this.x += xstep; //+= Take the current value of this.x and add xstep to it: this.x = this.x + xstep (longer version)
         this.y += ystep;
     }
