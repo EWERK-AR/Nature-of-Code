@@ -1,5 +1,3 @@
-// In this sketch the walker can step in 9 directions
-
 // The "Walker" class defines a moving point on the canvas
 // It has properties (position) and behaviors (displaying itself)
 // Class = Recipe
@@ -10,6 +8,12 @@ class Walker {
         this.x = width / 2;
         // Starting at the center of the canvas vertically
         this.y = height / 2;
+        // Noise offsets act like "pointers" along a smooth noise curve
+        // Starting ty far from tx -> x and y steps move independently 
+        // Noise offset for x step size
+        this.tx = 0;
+        // Noise offset for y step size
+        this.ty = 10000;
     }
     //The show method displays the Walker on the screen
     show () {
@@ -18,15 +22,27 @@ class Walker {
         // Draw a point at the Walker´s position
         point(this.x, this.y);
     }
-    // The step method makes the Walker take a step in a random direction (including diagonals)
+    // The step method moves the Walker: direction is random, but step size is controlled smoothly by Perlin noise
     step() {
-        // Generate a random number: 0, 1, or 2 → then shift it to -1, 0, or 1; round it down to the nearest whole number
-        // This determines how much to move along the x and y-axis (left, none or right)
-        let xstep = floor(random(3)) - 1;
-        let ystep = floor(random(3)) - 1;
-        // Based on the random number, decide the direction to move (9 possibilities)
+        // Generating smooth step sizes from noise (0 to 4 pixels)
+
+        // noise(this.tx) returns smooth value (0–1), then map() turns it into a step size (0–4 pixels)
+        let xstep = map(noise(this.tx), 0, 1, 0, 4); // map(value to map, current min and max range, desired min and max range)
+        let ystep = map(noise(this.ty), 0, 1, 0, 4);
+
+        // Randomly deciding if step should be negative or positive
+        // random(1) gives a decimal number between 0 and 1, there’s a 50% chance it’s less than 0.5
+        // If it is, multiply xstep by -1 -> flips it to negative; if not, leave it positive
+        if (random(1) < 0.5) xstep *= -1;
+        if (random(1) < 0.5) ystep *= -1;
+
+        // Based on the random number, decide the direction to move
         this.x += xstep; //+= Take the current value of this.x and add xstep to it: this.x = this.x + xstep (longer version)
         this.y += ystep;
+
+        // Moving forward in noise space -> next frame gives a slightly different value -> step size changes smoothly over time
+        this.tx += 0.01;
+        this.ty += 0.01;
     }
 }
 

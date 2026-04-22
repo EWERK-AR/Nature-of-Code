@@ -26,7 +26,7 @@ class Walker {
         let xstep = acceptreject() * step;
         // Randomly deciding if step should be negative or positive
         // random(1) gives a decimal number between 0 and 1, there’s a 50% chance it’s less than 0.5
-        // If it is, multiply xstep by -1 → flips it to negative; if not, leave it positive
+        // If it is, multiply xstep by -1 -> flips it to negative; if not, leave it positive
         if (random(1) < 0.5) xstep *= -1;
 
         // Generating a random step size for y using accept-reject and scale accepted random number to max step
@@ -53,7 +53,8 @@ function acceptreject() {
         let r2 = random(1);
         // Accept r1 if r2 < probability
         if (r2 < probability) {
-            return r1; // qualified number returned
+            // Qualified number returned
+            return r1;
         }
         // Otherwise, try again
     }
