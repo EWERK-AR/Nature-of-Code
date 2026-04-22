@@ -28,4 +28,4 @@ Completed Animated 2D Perlin Noise excercise, created corresponding files.
 Completed Animated 2D Landscape excercise, created corresponding files.
 Finished all Chapter 0 tasks.
 Restructured Chapter 1 folder. Completed vector based 4 and 9 directions walker exercises, created corresponding files.
-Competed 3D Bouncing Sphere task and created corresponding files.
+Completed 3D Bouncing Sphere task and created corresponding files.
