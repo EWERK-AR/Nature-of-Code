@@ -19,3 +19,10 @@ Solved the excercise. Tried to open it via Live Server, didn´t work. Realised .
 Questioned my life and took a break.
 Found a solution for the Aces.js file issue, tested via Live Server, everything worked. Happy life!
 Completed Biased Walker Mouse Position excercise, created corresponding files.
+Completed Gaussian Paint Splatter Simulation excercise, created corresponding files. 
+Completed Gaussian Walker excercise, created corresponding files.
+Completed Quadratic Step Random Walker excercise, created corresponding files.
+Completed Perlin Noise Random Walker excercise, created corresponding files.
+Completed Exploring Perlin Noise excercise, created corresponding files.
+Completed Animated 2D Perlin Noise excercise, created corresponding files.
+Completed Animated 2D Landscape excercise, created corresponding files.

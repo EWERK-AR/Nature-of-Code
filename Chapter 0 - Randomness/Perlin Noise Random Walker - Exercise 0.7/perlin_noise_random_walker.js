@@ -55,7 +55,7 @@ function setup() {
     createCanvas(640, 240);
     // Creating a new Walker object and store it in the 'walker' variable
     walker = new Walker();
-    // Setting the background color to white
+    // Setting the background colour to white
     background(255);
 }
 
