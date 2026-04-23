@@ -9,25 +9,29 @@ class Mover {
         // Limit how fast the vehicle can go
         this.topSpeed = 5;
 
-        // Time variables for perlin noise
-        this.tx = 0;
-        this.ty = 10000; // different starting point for y
     }
     update() {
-    // Perlin noise to calculate smooth acceleration
-    // noise() gives values between 0 and 1 -> map() converts that into -1 to 1 (so we can move in all directions)
-    let ax = map(noise(this.tx),0 , 1, -1, 1);
-    let ay= map(noise(this.ty),0, 1, -1, 1);
 
-    // Create acceleration vector from noise
-    this.acceleration = createVector(ax, ay);
+    // Create a vector for the mouse position
+    let mouse = createVector(mouseX, mouseY);
 
-    // Control strength of acceleration
-    this.acceleration.mult(0.5);
+    // Find direction to mouse: Direction = mouse - position
+    let dir = p5.Vector.sub(mouse, this.position);
 
-    // Move forward in "time" -> changes the noise smoothly
-    this.tx += 0.01;
-    this.ty += 0.01;
+    // Measure distance: How far away is the mouse?
+    let distance = dir.mag();
+
+    // Normalize direction (length becomes 1)
+    dir.normalize();
+
+    // Scale strength based on distance: Far away = strong pull; Close = weak pull
+    let strength = distance * 0.01;
+
+    // Apply strength to direction
+    dir.mult(strength);
+
+    // Set acceleration
+    this.acceleration = dir;
 
     // Add acceleration to velocity (speed changes)
     this.velocity.add(this.acceleration);

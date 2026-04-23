@@ -10,25 +10,20 @@ function setup() {
 
     // Define all of the explanation text (as a single string)
     let explanation = `
-    Exercise 1.4: Write the limit() function for the p5.Vector class:
+    Exercise 1.7: Translate the following pseudocode to code, using static or nonstatic functions where appropriate:
 
-    // limit(max) makes sure the vector does not get longer than 'max'
+    The vector v equals (1, 5).
+    The vector u equals v multiplied by 2.
+    The vector w equals v minus u.
+    Divide the vector w by 3.
 
-    limit(max) {
-    
-        // Check if the current length (magnitude) of the vector is greater than the maximum allowed value
+    Solution:
 
-        if (this.mag() > max) {
+    let v = createVector.v(1, 5);
+    let u = p5Vector.mult(v, 2);
+    let w = p5Vector.sub(v, u);
+    w.div(3);
 
-            // normalize() changes the vector so its length becomes 1, but keeps the same direction
-
-            this.normalize();
-
-            // mult(max) scales the vector up to the desired maximum length; since it was length 1 after normalize(), it now becomes 'max'
-            
-            this.mult(max);
-        }
-    }
     `;
 
     // Display the full explanation text on the canvas, starting from position (20, 40)
