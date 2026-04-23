@@ -30,3 +30,5 @@ Finished all Chapter 0 tasks.
 Restructured Chapter 1 folder. Completed vector based 4 and 9 directions walker exercises, created corresponding files.
 Completed 3D Bouncing Sphere task and created corresponding files.
 Completed Vector Limit task and created corresponding files.
+Learned basic debugging through website page inspection: Open inspection -> Refresh Page -> Highlights the errors in the code.
+Learned that its crucial for update() and show() functions to be INSIDE the class.
