@@ -32,3 +32,10 @@ Completed 3D Bouncing Sphere task and created corresponding files.
 Completed Vector Limit task and created corresponding files.
 Learned basic debugging through website page inspection: Open inspection -> Refresh Page -> Highlights the errors in the code.
 Learned that its crucial for update() and show() functions to be INSIDE the class.
+Completed Vehicle Acceleration & Breaking task and created corresponding files.
+Completed Vehicle with Perlin Noise task and created corresponding files.
+Completed Vector Operations Practice task and created corresponding files.
+Completed Vehicle Mouse Based Acceleration task and created corresponding files.
+Fixed typos in task 1.4 Vector Limit.
+Double checked all references in index.html files. Tested all task displays.
+Finished Chapter 0: Randomness and Chapter 1: Vectors of the book "Nature of Code"
